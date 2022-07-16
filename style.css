@@ -64,22 +64,22 @@ h3 {
   border-radius: 5px;
   cursor: pointer;
   margin: 40px 20px;
-  height: 4px;
+  height: 10px;
   width: 90%;
+  font-size: 15px;
 }
 
 .progress {
   background: #242323;
   border-radius: 5px;
   height: 100%;
-  /* change this to show progress */
-  width: 66%;
+  width: 0%;
   transition: width 0.1s linear;
 }
 
 .duration-wrapper {
   position: relative;
-  top: -25px;
+  top: -30px;
   display: flex;
   justify-content: space-between;
 }
