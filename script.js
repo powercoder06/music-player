@@ -13,24 +13,34 @@ const nextBtn = document.getElementById('next');
 //Music
 const songs = [
     {
-        name:'jacinto-1',
-        displayName:'Electric Chill Machine',
-        artist:'Power Musician',
+        name:'Night Changes',
+        displayName:'Night Changes',
+        artist:'One Direction',
     },
     {
-        name:'jacinto-2',
-        displayName:'Seven Nation Army (Remix)',
-        artist:'Power Musician',
+        name:'Ik Lamha',
+        displayName:'Ik Lamha',
+        artist:'Azaan Sami Khan',
     },
     {
-        name:'jacinto-3',
-        displayName:'Goodnight, Disco Queen',
-        artist:'Power Musician',
+        name:'Dandelions',
+        displayName:'Dandelions',
+        artist:'Ruth B.',
     },
     {
-        name:'metric-1',
-        displayName:'Front Row (Remix)',
-        artist:'Power Musician',
+        name:'Aankhon Se Batana',
+        displayName:'Aankhon Se Batana',
+        artist:'Dikshant',
+    },
+    {
+        name:'The Night We Met',
+        displayName:'The Night We Met',
+        artist:'Lord Huron',
+    },
+    {
+        name:'House of Memories',
+        displayName:'House of Memories',
+        artist:'Panic! At The Disco',
     }
 
 ]
@@ -86,12 +96,12 @@ function nextSong() {
     if(songIndex > songs.length - 1) {
         songIndex = 0;
     }
-    loadSong(songs[songIndex]);
+    loadSong(songs[Math.floor(Math.random()*songs.length-1)]);
     playSong();
 }
 
 // on load- Select first song
-loadSong(songs[songIndex]);
+loadSong(songs[Math.floor(Math.random()*songs.length+1)]);
 
 //Update Progress Bar & Time
 function updateProgressBar(e) {
